@@ -11,9 +11,9 @@ func TestNew(t *testing.T) {
 	if tracer == nil {
 		t.Error("Newからの戻り値がnilです")
 	} else {
-		tracer.Trace("こんいちは、traceパッケージ")
+		tracer.Trace("こんにちは、traceパッケージ")
 		if buf.String() != "こんにちは、traceパッケージ\n" {
-			t.Errorf("`%s`という誤った文字列が検出されました", buf.String())
+			t.Errorf("'%s'という誤った文字列が検出されました", buf.String())
 		}
 	}
 }
