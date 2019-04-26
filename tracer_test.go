@@ -13,7 +13,7 @@ func TestNew(t *testing.T) {
 	} else {
 		tracer.Trace("こんいちは、traceパッケージ")
 		if buf.String() != "こんにちは、traceパッケージ\n" {
-			t.Error("'%s'という誤った文字列が検出されました", buf.String())
+			t.Errorf("`%s`という誤った文字列が検出されました", buf.String())
 		}
 	}
 }
